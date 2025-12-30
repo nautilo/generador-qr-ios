@@ -1,6 +1,6 @@
 # generador_qr_flutter
 
-Generador QR con backend Flask
+A new Flutter project.
 
 ## Getting Started
 

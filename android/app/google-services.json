@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "346948357639",
+    "project_id": "generador-qr-flutter-aaf9a",
+    "storage_bucket": "generador-qr-flutter-aaf9a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346948357639:android:3e6be9ddddf7a0eedca4a2",
+        "android_client_info": {
+          "package_name": "com.gladiator.generador_qr_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFwWawvMq_R7mguhtqSao3WpM77IoF5zI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
