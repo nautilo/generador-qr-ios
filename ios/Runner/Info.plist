@@ -26,6 +26,13 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+
+	<!-- Privacy - Bluetooth -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>La app no usa Bluetooth como función principal; este texto se incluye porque algunos componentes integrados pueden consultar el estado de Bluetooth. No recolectamos datos mediante Bluetooth.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>La app no usa Bluetooth como función principal; este texto se incluye porque algunos componentes integrados pueden consultar el estado de Bluetooth. No recolectamos datos mediante Bluetooth.</string>
+
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
