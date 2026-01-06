@@ -13,7 +13,6 @@ import 'reportes_webview_page.dart';
 import 'notificaciones_page.dart';
 import 'historial_invitaciones_page.dart';
 import 'main.dart' show notificacionStream; // 👈 importamos el stream global
-import 'app_config.dart';
 
 class HomeMenuPage extends StatefulWidget {
   final String rutUsuario;
@@ -26,6 +25,8 @@ class HomeMenuPage extends StatefulWidget {
 class _HomeMenuPageState extends State<HomeMenuPage> {
   static const Color botonColor = Color(0xFF5BA5A0);
   int noLeidas = 0;
+  final String base = "http://209.46.126.62:9999/admin";
+
   IO.Socket? socket;
   StreamSubscription? _sub;
 
@@ -56,7 +57,7 @@ class _HomeMenuPageState extends State<HomeMenuPage> {
   void _initSocket() {
     try {
       socket = IO.io(
-        AppConfig.baseUrl,
+        "http://209.46.126.62:9999",
         IO.OptionBuilder()
             .setTransports(['websocket'])
             .disableAutoConnect()
@@ -85,7 +86,7 @@ class _HomeMenuPageState extends State<HomeMenuPage> {
 
   Future<void> _checkNotificaciones() async {
     try {
-      final url = AppConfig.uri('/admin/notificaciones/${widget.rutUsuario}');
+      final url = Uri.parse("$base/notificaciones/${widget.rutUsuario}");
       final resp = await http.get(url);
 
       if (resp.statusCode == 200) {
